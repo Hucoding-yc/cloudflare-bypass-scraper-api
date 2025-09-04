@@ -1,6 +1,3 @@
-
-
-```markdown
 # Cloudflare Bypass Scraper API
 
 [![API Version](https://img.shields.io/badge/version-1.0.0-blue)](https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![RapidAPI](https://img.shields.io/badge/RapidAPI-Cloudflare%20Bypass-blue)](https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper)

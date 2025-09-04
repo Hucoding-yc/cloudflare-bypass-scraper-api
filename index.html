@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cloudflare Bypass Scraper API – Fetch Any Webpage HTML</title>
-  <meta name="description" content="Cloudflare Bypass Scraper API lets you fetch raw HTML from any webpage instantly. Bypass Cloudflare, JavaScript challenges, and bot checks with one simple request. Perfect for SEO, scraping, and automation tools.">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333; }
-    header { background: #222; color: #fff; padding: 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 26px; }
-    section { max-width: 900px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 6px; }
-    h2 { color: #222; margin-top: 30px; }
-    code { background: #eee; padding: 3px 6px; border-radius: 4px; }
-    pre { background: #eee; padding: 15px; border-radius: 6px; overflow-x: auto; }
-    a.btn { display: inline-block; background: #0073e6; color: #fff; padding: 12px 20px; border-radius: 4px; text-decoration: none; margin-top: 10px; }
-    footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudflare Bypass Scraper API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Cloudflare Bypass Scraper API</h1>
-    <p>Fetch raw HTML from any webpage – even behind Cloudflare & JavaScript</p>
-  </header>
+<body class="bg-gray-50 text-gray-800">
 
-  <section>
-    <h2>Overview</h2>
-    <p>
-      The Cloudflare Bypass Scraper API allows developers, SEO specialists, and automation engineers to fetch the full raw HTML of any webpage instantly. It handles Cloudflare protection, JavaScript rendering, and bot detection with a single request.
-    </p>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Cloudflare Bypass Scraper API</h1>
+      <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Get API on RapidAPI</a>
+    </div>
+  </nav>
 
-    <h2>Key Features</h2>
-    <ul>
-      <li>Bypass Cloudflare firewall and bot protection</li>
-      <li>Support for JavaScript-rendered websites</li>
-      <li>Instant raw HTML fetch</li>
-      <li>Proxyless scraping (no proxies required)</li>
-      <li>Optimized for SEO, scraping, and automation tools</li>
-    </ul>
-
-    <h2>Example Request</h2>
-    <pre><code>GET /get-html?url=https://example.com</code></pre>
-
-    <h2>Try the API</h2>
-    <p>
-      The API is available on RapidAPI. You can subscribe and start using it immediately.
-    </p>
-    <a href="https://rapidapi.com/" target="_blank" class="btn">View on RapidAPI</a>
+  <!-- Hero Section -->
+  <section class="bg-blue-50">
+    <div class="container mx-auto px-6 py-20 text-center">
+      <h2 class="text-4xl font-bold mb-4">Fetch Any Webpage HTML Instantly</h2>
+      <p class="text-gray-700 mb-6">Scrape websites protected by Cloudflare, JavaScript, or dynamic rendering in one simple request.</p>
+      <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Try the API Now</a>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Cloudflare Bypass Scraper API – All rights reserved.</p>
+  <!-- Features -->
+  <section class="container mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold text-center mb-12">Key Features</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 bg-white shadow rounded">
+        <h4 class="font-semibold text-xl mb-2">Cloudflare Bypass</h4>
+        <p>Scrape pages behind Cloudflare firewall easily.</p>
+      </div>
+      <div class="p-6 bg-white shadow rounded">
+        <h4 class="font-semibold text-xl mb-2">JavaScript Support</h4>
+        <p>Fetch websites that rely on client-side JS without extra setup.</p>
+      </div>
+      <div class="p-6 bg-white shadow rounded">
+        <h4 class="font-semibold text-xl mb-2">Raw HTML Output</h4>
+        <p>Get clean HTML instantly for SEO, automation, and data mining.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">How It Works</h3>
+      <pre class="bg-white p-6 rounded shadow overflow-x-auto">
+GET /get-html?url={TARGET_URL}
+Parameters:
+url (string) - The target webpage to scrape, e.g., https://example.com
+      </pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6">
+    <div class="container mx-auto text-center text-gray-600">
+      &copy; 2025 Cloudflare Bypass Scraper API. All rights reserved.
+    </div>
   </footer>
+
 </body>
 </html>

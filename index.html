@@ -1,67 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="night">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloudflare Bypass Scraper API</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare Bypass Scraper API - Bypass Cloudflare Protection & Scrape Any Website</title>
+    <meta name="description" content="Professional Cloudflare Bypass API for web scraping. Bypass Cloudflare protection, render JavaScript, and scrape HTML content without proxies. Easy integration with REST API.">
+    <meta name="keywords" content="Cloudflare Bypass API, Web Scraping API, JavaScript Rendering, Proxyless Scraping, Scrape HTML, Cloudflare Protection Bypass, Web Automation API">
+    <meta name="author" content="PDFTask">
+    <meta property="og:title" content="Cloudflare Bypass Scraper API">
+    <meta property="og:description" content="Professional API to bypass Cloudflare protection and scrape any website with JavaScript rendering support.">
+    <meta property="og:type" content="website">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .code-block {
+            background: #1e293b;
+            color: #f1f5f9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            border: 1px solid #334155;
+        }
+        .syntax-keyword { color: #60a5fa; }
+        .syntax-string { color: #34d399; }
+        .syntax-comment { color: #94a3b8; }
+        .syntax-number { color: #fbbf24; }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto">
+            <div class="flex-1">
+                <a class="text-2xl font-bold text-gray-800">
+                    <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
+                    Cloudflare Bypass API
+                </a>
+            </div>
+            <div class="flex-none hidden md:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="#features" class="text-gray-600 hover:text-blue-600">Features</a></li>
+                    <li><a href="#examples" class="text-gray-600 hover:text-blue-600">Examples</a></li>
+                    <li><a href="#documentation" class="text-gray-600 hover:text-blue-600">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Cloudflare Bypass Scraper API</h1>
-      <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Get API on RapidAPI</a>
-    </div>
-  </nav>
+    <!-- Hero Section -->
+    <section class="hero min-h-screen hero-bg text-white">
+        <div class="hero-content text-center max-w-6xl">
+            <div class="w-full">
+                <div class="mb-6">
+                    <span class="inline-block bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
+                        Professional Web Scraping Solution
+                    </span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                    <span class="block text-white">Cloudflare Bypass</span>
+                    <span class="block gradient-text">Scraper API</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Break through Cloudflare protection effortlessly. Render JavaScript, bypass anti-bot systems, 
+                    and extract clean HTML content without proxies.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                    <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" 
+                       target="_blank" 
+                       class="btn btn-primary-custom btn-lg px-8">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="#documentation" class="btn btn-outline btn-lg px-8 text-white border-white hover:bg-white hover:text-gray-800">
+                        <i class="fas fa-book mr-2"></i>
+                        Documentation
+                    </a>
+                </div>
+                
+                <!-- Simple Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-1">99.9%</div>
+                        <div class="text-sm text-gray-400">Uptime</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-1">&lt;2s</div>
+                        <div class="text-sm text-gray-400">Response</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-1">10K+</div>
+                        <div class="text-sm text-gray-400">Developers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400 mb-1">24/7</div>
+                        <div class="text-sm text-gray-400">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-50">
-    <div class="container mx-auto px-6 py-20 text-center">
-      <h2 class="text-4xl font-bold mb-4">Fetch Any Webpage HTML Instantly</h2>
-      <p class="text-gray-700 mb-6">Scrape websites protected by Cloudflare, JavaScript, or dynamic rendering in one simple request.</p>
-      <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Try the API Now</a>
-    </div>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Why Choose Our API?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Built for developers who need reliable web scraping without complexity
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Cloudflare Bypass API</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Automatically bypass Cloudflare's anti-bot protection including DDoS protection and JavaScript challenges.
+                    </p>
+                </div>
 
-  <!-- Features -->
-  <section class="container mx-auto px-6 py-16">
-    <h3 class="text-3xl font-bold text-center mb-12">Key Features</h3>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-semibold text-xl mb-2">Cloudflare Bypass</h4>
-        <p>Scrape pages behind Cloudflare firewall easily.</p>
-      </div>
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-semibold text-xl mb-2">JavaScript Support</h4>
-        <p>Fetch websites that rely on client-side JS without extra setup.</p>
-      </div>
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-semibold text-xl mb-2">Raw HTML Output</h4>
-        <p>Get clean HTML instantly for SEO, automation, and data mining.</p>
-      </div>
-    </div>
-  </section>
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">JavaScript Rendering</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Full JavaScript execution support to scrape dynamic content and AJAX-loaded data.
+                    </p>
+                </div>
 
-  <!-- How It Works -->
-  <section class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">How It Works</h3>
-      <pre class="bg-white p-6 rounded shadow overflow-x-auto">
-GET /get-html?url={TARGET_URL}
-Parameters:
-url (string) - The target webpage to scrape, e.g., https://example.com
-      </pre>
-    </div>
-  </section>
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-download text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Scrape HTML Content</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Extract clean HTML content and structured data with high accuracy and reliability.
+                    </p>
+                </div>
 
-  <!-- Footer -->
-  <footer class="bg-white shadow-inner py-6">
-    <div class="container mx-auto text-center text-gray-600">
-      &copy; 2025 Cloudflare Bypass Scraper API. All rights reserved.
-    </div>
-  </footer>
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-network-wired text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Proxyless Scraping</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No need to manage proxy servers. Our infrastructure handles all the complexity.
+                    </p>
+                </div>
 
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">High Performance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Optimized for speed with global infrastructure ensuring fast response times.
+                    </p>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plug text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Easy Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Simple REST API with comprehensive documentation and code examples.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section id="examples" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Quick Start Examples
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Get started in minutes with these simple code examples
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="btn btn-sm btn-primary" onclick="showTab('curl')">cURL</button>
+                    <button class="btn btn-sm btn-outline" onclick="showTab('python')">Python</button>
+                    <button class="btn btn-sm btn-outline" onclick="showTab('javascript')">JavaScript</button>
+                    <button class="btn btn-sm btn-outline" onclick="showTab('php')">PHP</button>
+                </div>
+
+                <div id="curl-tab" class="tab-content">
+                    <div class="code-block">
+<pre><span class="syntax-comment"># Basic scraping request</span>
+<span class="syntax-keyword">curl</span> <span class="syntax-string">-X POST</span> <span class="syntax-string">"https://cloudflare-bypass-scraper.p.rapidapi.com/scrape"</span> \
+  <span class="syntax-string">-H</span> <span class="syntax-string">"X-RapidAPI-Key: YOUR_API_KEY"</span> \
+  <span class="syntax-string">-H</span> <span class="syntax-string">"X-RapidAPI-Host: cloudflare-bypass-scraper.p.rapidapi.com"</span> \
+  <span class="syntax-string">-H</span> <span class="syntax-string">"Content-Type: application/json"</span> \
+  <span class="syntax-string">-d</span> <span class="syntax-string">'{
+    "url": "https://example.com",
+    "wait_for": 3000,
+    "render_js": true
+  }'</span></pre>
+                    </div>
+                </div>
+
+                <div id="python-tab" class="tab-content hidden">
+                    <div class="code-block">
+<pre><span class="syntax-keyword">import</span> requests
+
+url = <span class="syntax-string">"https://cloudflare-bypass-scraper.p.rapidapi.com/scrape"</span>
+headers = {
+    <span class="syntax-string">"X-RapidAPI-Key"</span>: <span class="syntax-string">"YOUR_API_KEY"</span>,
+    <span class="syntax-string">"X-RapidAPI-Host"</span>: <span class="syntax-string">"cloudflare-bypass-scraper.p.rapidapi.com"</span>,
+    <span class="syntax-string">"Content-Type"</span>: <span class="syntax-string">"application/json"</span>
+}
+
+payload = {
+    <span class="syntax-string">"url"</span>: <span class="syntax-string">"https://example.com"</span>,
+    <span class="syntax-string">"wait_for"</span>: <span class="syntax-number">3000</span>,
+    <span class="syntax-string">"render_js"</span>: <span class="syntax-keyword">True</span>
+}
+
+response = requests.post(url, headers=headers, json=payload)
+data = response.json()
+<span class="syntax-keyword">print</span>(data[<span class="syntax-string">"html"</span>])</pre>
+                    </div>
+                </div>
+
+                <div id="javascript-tab" class="tab-content hidden">
+                    <div class="code-block">
+<pre><span class="syntax-keyword">const</span> options = {
+  method: <span class="syntax-string">'POST'</span>,
+  headers: {
+    <span class="syntax-string">'X-RapidAPI-Key'</span>: <span class="syntax-string">'YOUR_API_KEY'</span>,
+    <span class="syntax-string">'X-RapidAPI-Host'</span>: <span class="syntax-string">'cloudflare-bypass-scraper.p.rapidapi.com'</span>,
+    <span class="syntax-string">'Content-Type'</span>: <span class="syntax-string">'application/json'</span>
+  },
+  body: JSON.stringify({
+    url: <span class="syntax-string">'https://example.com'</span>,
+    wait_for: <span class="syntax-number">3000</span>,
+    render_js: <span class="syntax-keyword">true</span>
+  })
+};
+
+<span class="syntax-keyword">fetch</span>(<span class="syntax-string">'https://cloudflare-bypass-scraper.p.rapidapi.com/scrape'</span>, options)
+  .then(response => response.json())
+  .then(data => console.log(data.html));</pre>
+                    </div>
+                </div>
+
+                <div id="php-tab" class="tab-content hidden">
+                    <div class="code-block">
+<pre><span class="syntax-keyword">&lt;?php</span>
+<span class="syntax-keyword">$url</span> = <span class="syntax-string">"https://cloudflare-bypass-scraper.p.rapidapi.com/scrape"</span>;
+<span class="syntax-keyword">$headers</span> = [
+    <span class="syntax-string">"X-RapidAPI-Key: YOUR_API_KEY"</span>,
+    <span class="syntax-string">"X-RapidAPI-Host: cloudflare-bypass-scraper.p.rapidapi.com"</span>,
+    <span class="syntax-string">"Content-Type: application/json"</span>
+];
+
+<span class="syntax-keyword">$data</span> = json_encode([
+    <span class="syntax-string">"url"</span> => <span class="syntax-string">"https://example.com"</span>,
+    <span class="syntax-string">"wait_for"</span> => <span class="syntax-number">3000</span>,
+    <span class="syntax-string">"render_js"</span> => <span class="syntax-keyword">true</span>
+]);
+
+<span class="syntax-keyword">$ch</span> = curl_init();
+curl_setopt(<span class="syntax-keyword">$ch</span>, CURLOPT_URL, <span class="syntax-keyword">$url</span>);
+curl_setopt(<span class="syntax-keyword">$ch</span>, CURLOPT_POST, <span class="syntax-keyword">true</span>);
+curl_setopt(<span class="syntax-keyword">$ch</span>, CURLOPT_POSTFIELDS, <span class="syntax-keyword">$data</span>);
+curl_setopt(<span class="syntax-keyword">$ch</span>, CURLOPT_HTTPHEADER, <span class="syntax-keyword">$headers</span>);
+curl_setopt(<span class="syntax-keyword">$ch</span>, CURLOPT_RETURNTRANSFER, <span class="syntax-keyword">true</span>);
+
+<span class="syntax-keyword">$response</span> = curl_exec(<span class="syntax-keyword">$ch</span>);
+<span class="syntax-keyword">$result</span> = json_decode(<span class="syntax-keyword">$response</span>, <span class="syntax-keyword">true</span>);
+echo <span class="syntax-keyword">$result</span>[<span class="syntax-string">'html'</span>];
+<span class="syntax-keyword">?&gt;</span></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Documentation Section -->
+    <section id="documentation" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    API Documentation
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Complete reference for integration
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Endpoint -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">API Endpoint</h3>
+                    <div class="bg-gray-800 text-white p-4 rounded-lg font-mono">
+                        POST https://cloudflare-bypass-scraper.p.rapidapi.com/scrape
+                    </div>
+                </div>
+
+                <!-- Parameters -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Parameters</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+                            <thead>
+                                <tr class="border-gray-200">
+                                    <th class="text-left">Parameter</th>
+                                    <th class="text-left">Type</th>
+                                    <th class="text-left">Required</th>
+                                    <th class="text-left">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-gray-200">
+                                    <td><code class="bg-gray-200 px-2 py-1 rounded">url</code></td>
+                                    <td>string</td>
+                                    <td><span class="badge badge-error badge-sm">Required</span></td>
+                                    <td>The URL to scrape</td>
+                                </tr>
+                                <tr class="border-gray-200">
+                                    <td><code class="bg-gray-200 px-2 py-1 rounded">render_js</code></td>
+                                    <td>boolean</td>
+                                    <td><span class="badge badge-ghost badge-sm">Optional</span></td>
+                                    <td>Enable JavaScript rendering</td>
+                                </tr>
+                                <tr class="border-gray-200">
+                                    <td><code class="bg-gray-200 px-2 py-1 rounded">wait_for</code></td>
+                                    <td>integer</td>
+                                    <td><span class="badge badge-ghost badge-sm">Optional</span></td>
+                                    <td>Wait time in milliseconds</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Response -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Example Response</h3>
+                    <div class="code-block">
+<pre>{
+  <span class="syntax-string">"success"</span>: <span class="syntax-keyword">true</span>,
+  <span class="syntax-string">"html"</span>: <span class="syntax-string">"&lt;!DOCTYPE html&gt;&lt;html&gt;...&lt;/html&gt;"</span>,
+  <span class="syntax-string">"url"</span>: <span class="syntax-string">"https://example.com"</span>,
+  <span class="syntax-string">"status_code"</span>: <span class="syntax-number">200</span>,
+  <span class="syntax-string">"response_time"</span>: <span class="syntax-number">2.34</span>
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Start?</h2>
+            <p class="text-xl mb-12 text-gray-300 max-w-2xl mx-auto">
+                Join thousands of developers using our API for reliable web scraping
+            </p>
+            <a href="https://rapidapi.com/pdftask-pdftask-default/api/cloudflare-bypass-scraper" 
+               target="_blank" 
+               class="btn btn-primary-custom btn-lg px-8">
+                <i class="fas fa-rocket mr-2"></i>
+                Get Your API Key
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-bold text-gray-800 mb-2">Cloudflare Bypass Scraper API</div>
+            <p class="text-gray-600 mb-4">Professional web scraping solution</p>
+            <p class="text-gray-500 text-sm">© 2024 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.querySelectorAll('button[onclick*="showTab"]').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            event.target.classList.remove('btn-outline');
+            event.target.classList.add('btn-primary');
+        }
+    </script>
 </body>
 </html>
